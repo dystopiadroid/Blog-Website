@@ -51,11 +51,151 @@
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
+                <div class="mx-2">
+                    <button class="btn btn-info mx-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                </div>
             </div>
         </div>
     </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login Here.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row ">
+                        <div class="col-md-12">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-md-12">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SignUp Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Create a new account.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="row my-2">
+                                <div class="col-md-12">
+                                    <label for="validationCustom01" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col-md-12">
+                                    <label for="validationCustom02" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="validationCustom02" value="" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="">
+                                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="name@example.com">
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div>
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div>
+                                    <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col-md-12">
+                                    <label for="validationCustom03" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="validationCustom03" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid city.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-2">
+                                <div class="col-md-8">
+                                    <label for="validationCustom04" class="form-label">Country</label>
+                                    <select class="form-select" id="validationCustom04" required>
+                                        <option selected disabled value="">Choose...</option>
+                                        <option>India</option>
+                                        <option>USA</option>
+                                        <option>China</option>
+                                        <option>Japan</option>
+                                        <option>Russia</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Please select a valid state.
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="validationCustom05" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="validationCustom05" required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid zip.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-3">
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                                            required>
+                                        <label class="form-check-label" for="invalidCheck">
+                                            Agree to terms and conditions
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree before submitting.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">SignUp</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -120,7 +260,8 @@
                         <h3 class="mb-0">Hacking Summit Israel 2021</h3>
                         <div class="py-2 mb-1 text-muted">Nov 12</div>
                         <p class="card-text mb-auto">The annual conference gathers the largest community of security
-                            industry influencers, public and private sector thought leaders, and elite hackers in the
+                            industry influencers, public and private sector thought leaders, and elite hackers in
+                            the
                             world.
                         </p>
                         <a href="#" class="stretched-link mt-2">Read more</a>
@@ -138,7 +279,8 @@
                         <h3 class="mb-0">Bootstrap v5.1</h3>
                         <div class="py-2 mb-1 text-muted">June 20</div>
                         <p class="card-text mb-auto">Quickly design and customize responsive mobile-first sites with
-                            Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables
+                            Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass
+                            variables
                             and mixins, responsive grid system,etc.
                         </p>
                         <a href="#" class="stretched-link mt-2">Read more</a>
@@ -160,8 +302,10 @@
                         <strong class="d-inline-block mb-2 text-secondary">Augmented Reality</strong>
                         <h3 class="mb-0">Google AR</h3>
                         <div class="py-2 mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">Augmented reality overlays digital content and information onto the
-                            physical world — as if they’re actually there with you, in your own space. AR opens up new
+                        <p class="card-text mb-auto">Augmented reality overlays digital content and information onto
+                            the
+                            physical world — as if they’re actually there with you, in your own space. AR opens up
+                            new
                             ways for your devices to be helpful throughout your day.
                         </p>
                         <a href="#" class="stretched-link mt-2">Read more</a>
@@ -180,7 +324,8 @@
                         <h3 class="mb-0">OpenCV</h3>
                         <div class="py-2 mb-1 text-muted">Nov 12</div>
                         <p class="card-text mb-auto">OpenCV (Open Source Computer Vision Library) is an open source
-                            computer vision and machine learning software library. OpenCV was built to provide a common
+                            computer vision and machine learning software library. OpenCV was built to provide a
+                            common
                             infrastructure.
                         </p>
                         <a href="#" class="stretched-link mt-2">Read more</a>
